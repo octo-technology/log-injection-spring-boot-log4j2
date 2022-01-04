@@ -1,0 +1,18 @@
+<Configuration name="ConfigTest" status="ERROR" monitorInterval="5">
+<Appenders>
+    <Console name="ConsoleJSONAppender" target="SYSTEM_OUT">
+        <JsonLayout complete="false" compact="false">
+            <KeyValuePair key="date" value="${date:yyyyMMdd-HHmmss} " />
+        </JsonLayout>
+    </Console>
+</Appenders>
+
+<Loggers>
+    <Root level="error">
+      <AppenderRef ref="ConsoleJSONAppender"/>
+    </Root>
+    <Logger name="CONSOLE_JSON_APPENDER" level="TRACE" additivity="false">
+        <AppenderRef ref="ConsoleJSONAppender" />
+    </Logger>
+</Loggers>
+</Configuration>
