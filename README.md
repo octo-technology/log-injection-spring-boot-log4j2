@@ -1,4 +1,4 @@
-# Log Injection with Spring Boot and Logback
+# Log Injection with Spring Boot and Log4J2
 
 ## Usage
 
@@ -54,5 +54,11 @@ curl http://localhost:8080/\?name\=%24%7Bjndi%3Aldap%3A%2F%2Flocalhost%3A5000%7D
 
 ## Fix
 
-Try to fix this app!
-Don't disable JNDI Lookup, this could be usefull. 
+Using output encoding (JSON), log injection are not!
+
+Even if app uses a vulnerable version of log4j2.
+Check it with OSS Index:
+
+```
+./gradlew ossIndexAudit
+```
