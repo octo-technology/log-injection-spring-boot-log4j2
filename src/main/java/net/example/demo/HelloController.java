@@ -14,7 +14,7 @@ public class HelloController {
     @RequestMapping("/")
     public String index(@RequestParam(value = "name", defaultValue = "World") String name) {
         logger.debug("Hello {}", name);
+
         return "Hello " + name;
     }
-
 }
