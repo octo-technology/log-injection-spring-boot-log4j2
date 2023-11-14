@@ -2,6 +2,9 @@
 
 ## Usage
 
+Testé avec Java 17. 
+Mettre à jour la variable d'environnement JAVA_HOME si nécessaire.
+
 - Run
 
 ```shell
