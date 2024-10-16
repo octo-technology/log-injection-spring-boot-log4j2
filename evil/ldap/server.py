@@ -20,10 +20,6 @@ def start_ldap_server(web_server_address: str, web_server_port: int, java_class_
 
     subprocess.run([
         java_bin,
-        "--version",
-    ])
-    subprocess.run([
-        java_bin,
         "-cp",
         os.path.join(current_folder, "marshalsec-0.0.3-SNAPSHOT-all.jar"),
         "marshalsec.jndi.LDAPRefServer",
